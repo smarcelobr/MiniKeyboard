@@ -1,6 +1,6 @@
 
-#ifndef _BOTAO_H
-#define _BOTAO_H
+#ifndef BOTAO_H
+#define BOTAO_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
    #include "Arduino.h"
@@ -27,7 +27,7 @@ public:
    /**
     * Cria e configura o pino do botáo para INPUT com PULL_UP.
     */
-   Botao(int pinButton);
+   explicit Botao(int pinButton);
    
    /**
     * Durante o setup, vocë pode definir uma função de callback para ser chamada quando o botão mudar para o estado HIGH.

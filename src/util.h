@@ -1,5 +1,5 @@
-#ifndef _UTIL_H
-#define _UTIL_H
+#ifndef UTIL_H
+#define UTIL_H
 
 #if defined(ARDUINO) && ARDUINO >= 100
    #include "Arduino.h"
@@ -46,7 +46,7 @@ private:
   void (*funcao)(S *source);
   
 public:
-  FuncaoCallback(void (*funcao)(S *source)): Callback<S>(), funcao(funcao) { }
+  explicit FuncaoCallback(void (*funcao)(S *source)): Callback<S>(), funcao(funcao) { }
   
   void setFuncao(void (*funcao)(S *source)) { this->funcao = funcao; }  
    
